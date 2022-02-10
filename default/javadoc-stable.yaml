@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: javadoc-stable
-        image: galasadev/galasa-javadoc-amd64:latest
+        image: icr.io/galasadev/galasa-javadoc-amd64:0.19.1
         ports:
         - containerPort: 80
       affinity:

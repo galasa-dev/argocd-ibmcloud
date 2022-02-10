@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
       - name: resources
-        image: docker.galasa.dev/galasadev/galasa-resources:latest
-        imagePullPolicy: Always
+        image: icr.io/galasadev/galasa-resources:0.19.1
         ports:
         - containerPort: 80
       affinity:
