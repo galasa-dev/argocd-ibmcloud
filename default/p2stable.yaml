@@ -4,6 +4,9 @@ metadata:
   name: p2stable
 spec:
   replicas: 2
+  selector:
+    matchLabels:
+      app: p2stable
   strategy:
     type: RollingUpdate
   template:
