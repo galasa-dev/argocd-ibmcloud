@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: community-ingress-resource
+spec:
   tls:
   - hosts:
     - p2.galasa.dev
@@ -15,7 +16,6 @@ metadata:
     - docker.galasa.dev
     - development.galasa.dev
     secretName: galasa-cert7
-spec:
   rules:
   - host: p2.galasa.dev
     http:
