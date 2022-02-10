@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resources
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: resources
+  template:
+    metadata:
+      labels:
+        app: resources
+    spec:
+      containers:
+      - name: resources
+        image: docker.galasa.dev/galasadev/galasa-resources:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 100
+            podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                - key: app
+                  operator: In
+                  values:
+                  - resources
+              topologyKey: kubernetes.io/hostname
+
