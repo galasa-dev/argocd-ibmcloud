@@ -17,6 +17,7 @@ spec:
       containers:
       - name: p2stable
         image: docker.galasa.dev/galasadev/galasa-p2:main
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
       affinity:
