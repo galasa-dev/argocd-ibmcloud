@@ -17,7 +17,7 @@ spec:
     - nexus.galasa.dev
     - docker.galasa.dev
     - development.galasa.dev
-    secretName: galasa-cert8
+    secretName: galasa-cert9
   rules:
   - host: p2.galasa.dev
     http:
