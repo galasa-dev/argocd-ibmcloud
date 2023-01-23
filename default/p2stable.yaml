@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: p2stable
-        image: icr.io/galasadev/galasa-p2-amd64:0.24.0
+        image: icr.io/galasadev/galasa-p2-amd64:0.25.0
         ports:
         - containerPort: 80
       affinity:
