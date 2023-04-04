@@ -14,6 +14,7 @@ spec:
     - resources.galasa.dev
     - javadoc.galasa.dev
     - javadoc-snapshot.galasa.dev
+    - rest.galasa.dev
     - nexus.galasa.dev
     - docker.galasa.dev
     - development.galasa.dev
@@ -85,6 +86,16 @@ spec:
       - backend:
           service:
             name: resources
+            port:
+              number: 80
+        path: /
+        pathType: ImplementationSpecific
+  - host: rest.galasa.dev
+    http:
+      paths:
+      - backend:
+          service:
+            name: restapidoc-stable
             port:
               number: 80
         path: /
